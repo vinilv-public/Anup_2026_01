@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight, Activity } from 'lucide-react';
 import { DOCTOR_NAME, HOSPITAL } from '../constants';
-import portrait from '../public/portrait.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -58,7 +57,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-medical-600 rounded-3xl rotate-3 opacity-10"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[3/4]">
               <img 
-                src={portrait}
+                src="./portrait.jpg"
                 alt="Dr. Anup Purandare Portrait" 
                 className="w-full h-full object-cover"
               />
