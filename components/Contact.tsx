@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+<<<<<<< HEAD
 import { CONTACT_PHONE, CONTACT_EMAIL, HOSPITAL, LOCATION_MAP_URL } from '../constants';
+=======
+import { CONTACT_PHONE, CONTACT_EMAIL, HOSPITAL, HOSPITAL_ADDRESS, LOCATION_MAP_URL } from '../constants';
+>>>>>>> ec7b607 (Initial commit from Google AI Studio export)
 
 const ContactItem: React.FC<{ icon: React.ReactNode; title: string; detail: string; href?: string }> = ({ icon, title, detail, href }) => (
   <div className="flex items-start gap-4">
@@ -45,8 +49,13 @@ const Contact: React.FC = () => {
               />
               <ContactItem 
                 icon={<MapPin size={20} />} 
+<<<<<<< HEAD
                 title="Hospital" 
                 detail={HOSPITAL} 
+=======
+                title="Location" 
+                detail={`${HOSPITAL}, ${HOSPITAL_ADDRESS}`} 
+>>>>>>> ec7b607 (Initial commit from Google AI Studio export)
               />
                <ContactItem 
                 icon={<Clock size={20} />} 

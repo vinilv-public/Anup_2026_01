@@ -57,7 +57,11 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-medical-600 rounded-3xl rotate-3 opacity-10"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[3/4]">
               <img 
+<<<<<<< HEAD
                 src="https://picsum.photos/800/1000?grayscale" 
+=======
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+>>>>>>> ec7b607 (Initial commit from Google AI Studio export)
                 alt="Dr. Anup Purandare Portrait" 
                 className="w-full h-full object-cover"
               />
