@@ -3,6 +3,7 @@ import { Menu, X, Phone } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasMenuBeenClicked, setHasMenuBeenClicked] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,7 +28,27 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              try {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } catch (e) {
+                window.scrollTo(0, 0);
+              }
+            }}
+            onKeyDown={(e: React.KeyboardEvent) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                try {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                } catch (err) {
+                  window.scrollTo(0, 0);
+                }
+              }
+            }}
+            className="flex-shrink-0 flex items-center cursor-pointer"
+          >
             <span className={`font-serif font-bold text-2xl ${isScrolled ? 'text-medical-900' : 'text-slate-800'}`}>
               Dr. Anup Purandare <span className="text-medical-600 text-sm font-sans tracking-wide font-semibold ml-1">MD, NEUROSURGEON</span>
             </span>
@@ -56,7 +77,18 @@ const Navigation: React.FC = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                if (!hasMenuBeenClicked) {
+                  try {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } catch (e) {
+                    // fallback if window is not available
+                    window.scrollTo(0, 0);
+                  }
+                  setHasMenuBeenClicked(true);
+                }
+                setIsOpen(!isOpen);
+              }}
               className={`p-2 rounded-md ${isScrolled ? 'text-slate-800' : 'text-slate-800'}`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
