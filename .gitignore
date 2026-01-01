@@ -12,10 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
-<<<<<<< HEAD
-=======
 .env
->>>>>>> ec7b607 (Initial commit from Google AI Studio export)
 
 # Editor directories and files
 .vscode/*

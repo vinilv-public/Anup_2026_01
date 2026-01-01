@@ -3,10 +3,7 @@ import { TimelineItem, Testimonial, Service, GalleryItem, StatData } from './typ
 export const DOCTOR_NAME = "Dr. Anup Purandare";
 export const SPECIALTY = "Senior Neurosurgeon, MD";
 export const HOSPITAL = "Bharati Hospital, Pune";
-<<<<<<< HEAD
-=======
 export const HOSPITAL_ADDRESS = "Pune - Satara Rd, Dhankawadi, Pune, Maharashtra 411043";
->>>>>>> ec7b607 (Initial commit from Google AI Studio export)
 export const CONTACT_PHONE = "+91 20 1234 5678";
 export const CONTACT_EMAIL = "contact@anuppurandare-neuro.com";
 export const LOCATION_MAP_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.576169904636!2d73.8504!3d18.4575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eac854303867%3A0x2a00778401306509!2sBharati%20Vidyapeeth%20Medical%20College%20and%20Hospital!5e0!3m2!1sen!2sin!4v1625555555555!5m2!1sen!2sin";
